@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ting (Taika) Shu - Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    .contact-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    nav {
+      background: #34495e;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      text-align: center;
+    }
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #2c3e50;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #1abc9c;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .section-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .skills {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .skill-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1 1 200px;
+      border: 1px solid #eee;
+    }
+    .competition-img {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .activity-gallery {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 15px;
+      padding-bottom: 10px;
+    }
+    .activity-img {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+      scroll-snap-align: start;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .timeline-item {
+      margin-bottom: 30px;
+      padding-left: 20px;
+      border-left: 3px solid #2c3e50;
+    }
+    .qanda {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .back-to-top {
+      display: block;
+      width: fit-content;
+      margin: 40px auto 0;
+      padding: 10px 20px;
+      background-color: #2c3e50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .back-to-top:hover {
+      background-color: #1abc9c;
+    }
+    @media (max-width: 768px) {
+      nav { text-align: center; }
+      nav a { display: block; margin: 10px 0; }
+      .contact-info { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <img src="MY.jpg" alt="My Photo" class="profile-photo">
+  <h1>Ting (Taika) Shu</h1>
+  <p>Currently studying at LAB University of Applied Sciences (Bachelor) | GPA: 4.38</p>
+  <p>Completed: 83 credits, Expected before summer: 120–130 credits</p>
+  <div class="contact-info">
+    <div>
+      <p>Tongji University (Bachelor)</p>
+      <p>Address: Laatikkotehtaankatu 5C 38</p>
+    </div>
+    <div>
+      <p>Contact: +358 417 409 336</p>
+      <p>Email: tshu927@gmail.com</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#qanda">Q&A</a>
+  <a href="#thesis">Project</a>
+  <a href="#plan">Roadmap</a> 
+  <a href="#activities">Activities</a>
+  <a href="#contact">Contact</a>
+
+  <select id="language-select" onchange="translatePage(this.value)">
+    <option value="en">English</option>
+    <option value="fi">Suomi</option>
+    <option value="zh">中文</option>
+  </select>
+</nav>
+
+<div class="container">
+  <section id="about" class="section-card">
+    <h2>👋 Professional Summary</h2>
+    <p>I am Ting Shu from Shanghai, China, with over 10 years of nursing experience. In 2018, I joined a Sino-Japanese joint venture in healthcare, which gave me valuable insights into the impact of technology in this field.</p>
+    <p>From September 2019 to November 2022, I worked as a Clinical Research Manager for an American medical technology company, where I first engaged with IT through a project at Cognoa, applying AI to support children with autism. This experience showed me the profound ways technology can assist vulnerable populations, inspiring me to return to school to pursue further IT-related knowledge.</p>
+  </section>
+
+  <section id="skills" class="section-card">
+    <h2>💻 Skills & Education</h2>
+    <p><strong>Looking for an internship opportunity in IT-related field</strong></p>
+    <p>Participated in: Hackathon 2025, Game Design Competition 2025</p>
+    
+    <div class="skills">
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <p>Python (Beginner)</p>
+        <p>JavaScript (Beginner)</p>
+        <p>HTML/CSS (Beginner)</p>
+      </div>
+      <div class="skill-card">
+        <h3>Databases & Systems</h3>
+        <p>MySQL (Intermediate)</p>
+        <p>Linux (Beginner)</p>
+      </div>
+      <div class="skill-card">
+        <h3>Design Tools</h3>
+        <p>Figma (Beginner)</p>
+      </div>
+      <div class="skill-card">
+        <h3>Education</h3>
+        <p>LAB University of Applied Sciences (Bachelor): IT (2024-2028)</p>
+        <p>Tongji University (Bachelor): Nursing (2015-2018)</p>
+        <p>Nanchang University(College): Nursing (2007-2011)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section-card">
+    <h2>📌 Professional Experience</h2>
+    <div class="timeline-item">
+      <h3>Cognoa (Clinical Research Manager)   2020.09-2021.11</h3>
+      <h3>Cognoa (Clinical Research Associate) 2019.09--2020.09 </h3>
+      <ul>
+        <li>Led clinical trials following SOPs, submitting data to IRB/EC</li>
+        <li>Collected 100+ clinical data samples from three centers</li>
+        <li>Developed training materials for video analysts</li>
+        
+    <a href="https://www.fda.gov/news-events/press-announcements/fda-authorizes-marketing-diagnostic-aid-autism-spectrum-disorder">Hit the website about FDA Authorizes Marketing of Diagnostic Aid for Autism Spectrum Disorder</a>
+        <p></p>
+        <a href="https://www.prnewswire.com/news-releases/cognoa-receives-fda-marketing-authorization-for-first-of-its-kind-autism-diagnosis-aid-301304351.html">Hit the website about Cognoa Receives FDA Marketing Authorization for First-of-its-kind Autism Diagnosis Aid</a>
+
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <h3>Sheng Biao (Clinical Research Coordinator) 2018.03-2019.06</h3>
+      <ul>
+        <li>Coordinated multi-center clinical data collection</li>
+        <li>Managed data validation and archiving</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+        <h3>International Peace Maternity and Child Health Hospital    (NICU/Operating Room Nurse)     2013.04--2018.0</h3>
+        <h3> Children's Hospital of Shanghai                                 (Surgical Ward Nurse)     2011.12--2013.04</h3> 
+        <h3>Shanghai Children's Medical Center            (Outpatient Anesthesia Department Nurse)     2010.11--2011.12 </h3>
+    </div>
+  </section>
+
+  <section id="qanda" class="section-card">
+    <h2>❓ Career Transition Q&A</h2>
+    <div class="qanda">
+      <h3>Why transition from healthcare to IT?</h3>
+      <p>My experience at Cognoa revealed how technology - particularly AI - can transform healthcare outcomes. Working on the autism diagnosis project demonstrated:</p>
+      <ul>
+        <li>🖥️ Technology's potential to support vulnerable populations</li>
+        <li>📊 Data-driven solutions for complex medical challenges</li>
+        <li>🌍 The growing need for tech-healthcare interdisciplinary experts</li>
+      </ul>
+      <p>This inspired me to bridge my medical expertise with technical skills to develop impactful health tech solutions.</p>
+    </div>
+  </section>
+
+  <section id="thesis" class="section-card">
+    <h2>🎓 Bachelor Thesis Project</h2>
+    <p><strong>Working Title:</strong> Empowering Aging-in-Place: A Supportive App for Independent Seniors in Finland</p>
+  
+    <p>As Finland faces an aging population, many seniors who are mentally sound and physically capable still prefer to live independently rather than in nursing homes. However, daily tasks like showering or walking may still pose risks without supervision. My app aims to offer scheduled, flexible support to these seniors, helping them maintain independence safely.</p>
+  
+    <p>This idea was inspired by my current part-time job, where I assist elderly individuals based on my own schedule. Through this, I realized the model could benefit not only the elderly but also international students like myself.</p>
+  
+    <ul>
+      <li>📈 Addresses the real demand created by Finland’s aging society</li>
+      <li>🧑‍🎓 Helps students earn income without conflicting with academic schedules</li>
+      <li>👨‍👩‍👦 Reduces stress on working families needing elder care support</li>
+      <li>🌍 Enables international students to adapt to and better understand Finnish society</li>
+    </ul>
+  
+    <p>My plan is to research the needs of both seniors and students, and prototype an app that can match the two flexibly, securely, and meaningfully.</p>
+  </section>
+  
+
+  <section id="plan" class="section-card">
+    <h2>🧭 My 6-Month Roadmap</h2>
+    <p>This roadmap outlines my plans from now until the end of summer, combining academic growth, personal development, and career preparation.</p>
+    <ul>
+      <li><strong>April–May:</strong> Continue improving my portfolio and finalize web & data projects</li>
+      <li><strong>June:</strong> Apply for IT-related internships, especially in AI/ML, LLM, and game development fields</li>
+      <li><strong>July–August:</strong> Focused learning on machine learning topics; create workshop-style teaching slides</li>
+      <li><strong>August:</strong> Ask about assistant tutor opportunities for second-year students; prepare to share ML knowledge with peers</li>
+      <li><strong>Ongoing:</strong> Practice Finnish and English consistently (reading, speaking, and daily use)</li>
+    </ul>
+  </section>
+
+  <section id="activities" class="section-card">
+    <h2>🎯 Activities During Studies</h2>
+    <p>I actively participated in several events and team projects during my studies, including:</p>
+    <ul>
+      <li><strong>iWeek workshops</strong>: 3D printing, VR experiences, and Data Visualization</li>
+      <li><strong>Hackathons</strong>: Local university hackathon and FGJ25 game jam</li>
+      <li><strong>Outreach workshop</strong>: Organized and led a Data Visualization Workshop for high school students on School Day</li>
+    </ul>
+    <div class="activity-gallery">
+      <img src="3D-1.png" alt="3D Printing" class="activity-img">
+      <img src="3D2.png" alt="3D Printing 2" class="activity-img">
+      <img src="3D3.png" alt="3D Printing 3" class="activity-img">
+      <img src="VR.png" alt="VR Experience" class="activity-img">
+      <img src="hackathon0.png" alt="Hackathon" class="activity-img">
+      <img src="hackathon1.png" alt="Hackathon 1" class="activity-img">
+      <img src="hackathon2.png" alt="Hackathon 2" class="activity-img">
+      <img src="hackathon3.png" alt="Hackathon 3" class="activity-img">
+      <img src="game1.png" alt="Game Competition 1" class="activity-img">
+      <img src="game2.png" alt="Game Competition 2" class="activity-img">
+      <img src="schoolday1.png" alt="School Day 1" class="activity-img">
+      <img src="schoolday2.png" alt="School Day 2" class="activity-img">
+      <img src="schoolday3.png" alt="School Day 3" class="activity-img">
+      <img src="schoolday4.png" alt="School Day 4" class="activity-img">
+      <img src="schoolday5.png" alt="School Day 5" class="activity-img">
+      <img src="schoolday6.png" alt="School Day 6" class="activity-img">
+    </div>
+  </section>
+
+  <section id="contact" class="section-card">
+    <h2>📧 Contact Information</h2>
+    <p>Email: tshu927@gmail.com</p>
+    <p>Mobile: +358 417 409 336</p>
+    <p>Address: Laatikkotehtaankatu 5C 38, Finland</p>
+  </section>
+
+  <a href="#top" class="back-to-top">⬆ Back to Top</a>
+</div>
+
+
+  
+</body>
+</html>
